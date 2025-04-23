@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="text" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dam.alumno.filmoteca.MainController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="368.0">
+         <children>
+            <TableView fx:id="tableView" prefHeight="461.0" prefWidth="301.0">
+              <columns>
+                <TableColumn fx:id="columnaId" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="columnaTitulo" prefWidth="75.0" text="Título" />
+                  <TableColumn fx:id="columnaAño" prefWidth="75.0" text="Año" />
+                  <TableColumn fx:id="columnaValoracion" prefWidth="75.0" text="Valoración" />
+              </columns>
+            </TableView>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="28.0" layoutY="2.0" mnemonicParsing="false" onAction="#handlerSubList" text="Buscar" />
+                  <Button layoutX="11.0" layoutY="35.0" mnemonicParsing="false" onAction="#handlerNormal" text="Elimiar Filtro" />
+                  <TextField fx:id="buscador" layoutX="119.0" layoutY="15.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox prefHeight="400.0" prefWidth="300.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="294.0">
+               <children>
+                  <Text fx:id="textoTitulo" layoutX="15.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Título" wrappingWidth="144.0" AnchorPane.rightAnchor="140.0" />
+                  <Text fx:id="textoAño" layoutX="15.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Año" />
+                  <Text fx:id="textoDescripcion" layoutX="21.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción" textAlignment="JUSTIFY" wrappingWidth="258.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0" />
+                  <ImageView fx:id="textoPoster" fitHeight="100.0" fitWidth="143.0" layoutX="171.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@NIA.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="textoValoracion" layoutX="14.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valoración" />
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="316.0">
+               <children>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handlerNuevo" prefWidth="74.0" text="Añadir" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handlerlEditar" prefHeight="50.0" prefWidth="74.0" text="Modificar" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handlerEliminar" prefHeight="50.0" prefWidth="74.0" text="Borrar" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handlerSalir" prefHeight="50.0" prefWidth="74.0" text="Cerrar" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
